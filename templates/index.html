@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block body %}
+    <h1>Flask OSM</h1>
+    <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+      <div>
+          <div class="uk-card uk-card-default uk-card-body">
+            <form class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-2@s uk-inline">
+                    <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: location" id="input-long"></a>
+                    <input class="uk-input" type="text" placeholder="longitude" aria-label="50">
+                </div>
+                <div class="uk-width-1-2@s uk-inline">
+                    <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: location"></a>
+                    <input class="uk-input" type="text" placeholder="latitude" aria-label="50" id="input-lat">
+                </div>
+                <div class="uk-margin" uk-margin>
+                  <button class="uk-button uk-button-default" onclick="addMarker()">Подтвердить</button>
+                </div>
+            </form>
+          </div>
+      </div>
+    </div>
+    <div id="map" style="height: 250px"></div>
+    <ul>
+      <li>
+        <a
+          href="#"
+          onclick="popupMitText([52.4,13.4], 'Ich bin irgendwo in Berlin')"
+          >Popup in Berlin</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          onclick="popupMitText([48.1,11.6], 'Ich bin irgendwo in München')"
+          >Popup in München</a
+        >
+      </li>
+    </ul>
+    Marker:
+    <ul>
+      <li>
+        <a
+          href="#"
+          onclick="markerMitText([52.4,13.4], 'Ich bin irgendwo in Berlin')"
+          >Marker in Berlin</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          onclick="markerMitText([48.1,11.6], 'Ich bin irgendwo in München')"
+          >Marker in München</a
+        >
+      </li>
+    </ul>
+  </body>
+</html>
+{% endblock %}
