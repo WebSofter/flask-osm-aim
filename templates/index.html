@@ -5,9 +5,13 @@
       <div>
           <div class="uk-card uk-card-default uk-card-body">
             <form class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-1@s uk-inline">
+                    <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: commenting"></a>
+                    <input class="uk-input" type="text" placeholder="Сообщение(не обязательно)" aria-label="50" id="input-msg">
+                </div>
                 <div class="uk-width-1-2@s uk-inline">
-                    <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: location" id="input-long"></a>
-                    <input class="uk-input" type="text" placeholder="longitude" aria-label="50">
+                    <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: location"></a>
+                    <input class="uk-input" type="text" placeholder="longitude" aria-label="50" id="input-lon">
                 </div>
                 <div class="uk-width-1-2@s uk-inline">
                     <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: location"></a>
@@ -17,43 +21,15 @@
                   <button class="uk-button uk-button-default" onclick="addMarker()">Подтвердить</button>
                 </div>
             </form>
+            <label class="uk-form-label uk-form-danger" id="text-danger"></label>
           </div>
       </div>
     </div>
-    <div id="map" style="height: 250px"></div>
-    <ul>
-      <li>
-        <a
-          href="#"
-          onclick="popupMitText([52.4,13.4], 'Ich bin irgendwo in Berlin')"
-          >Popup in Berlin</a
-        >
-      </li>
-      <li>
-        <a
-          href="#"
-          onclick="popupMitText([48.1,11.6], 'Ich bin irgendwo in München')"
-          >Popup in München</a
-        >
-      </li>
-    </ul>
-    Marker:
-    <ul>
-      <li>
-        <a
-          href="#"
-          onclick="markerMitText([52.4,13.4], 'Ich bin irgendwo in Berlin')"
-          >Marker in Berlin</a
-        >
-      </li>
-      <li>
-        <a
-          href="#"
-          onclick="markerMitText([48.1,11.6], 'Ich bin irgendwo in München')"
-          >Marker in München</a
-        >
-      </li>
-    </ul>
+    <div id="map" style="height: 450px"></div>
+    <div class="uk-card-footer">
+      <div class="uk-width-1-1"><b>lon</b>: <input class="uk-input" disabled type="text" aria-label="50" id="label-lon"><div>
+      <div class="uk-width-1-1"><b>lat</b>: <input class="uk-input" disabled type="text" aria-label="50" id="label-lat"></div>
+    </div>
   </body>
 </html>
 {% endblock %}

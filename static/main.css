@@ -24,3 +24,8 @@ main {
   padding: 20px;
   width: 1200px;
 }
+#text-danger {
+  min-height: 12px;
+  width: 100%;
+  display: block;
+}
